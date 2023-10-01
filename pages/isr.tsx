@@ -19,7 +19,7 @@ const ISR: NextPage<ISRProps> = (props) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<SSGProps> = async (context) => {
+export const getStaticProps: GetStaticProps<ISRProps> = async (context) => {
   const timestamp = new Date().toLocaleString();
   const message = `${timestamp}에 getStaticProps가 실행되었습니다`;
 
