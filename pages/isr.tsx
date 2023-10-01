@@ -1,11 +1,11 @@
-import { NextPage, GetStaticProps } from "next";
+import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 
-type SSGProps = {
+type ISRProps = {
   message: string;
 };
 
-const SSG: NextPage<SSGProps> = (props) => {
+const ISR: NextPage<ISRProps> = (props) => {
   return (
     <div>
       <Head>
@@ -30,4 +30,4 @@ export const getStaticProps: GetStaticProps<SSGProps> = async (context) => {
   };
 };
 
-export default SSG;
+export default ISR;
